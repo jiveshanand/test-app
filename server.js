@@ -23,9 +23,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// app.get('/', (req, res) => {
-// 	res.json(database.users);
-// });
+app.get('/', (req, res) => {
+	console.log('Hitting Root Route');
+	res.json('Success');
+});
 
 app.post('/signin', (req, res) => {
 	// bcrypt.compare("bacon", hash, (err, res) => {
